@@ -2,8 +2,8 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from sqlalchemy.future import select
-from app.database import AsyncSessionLocal
-from app.model import Token
+from database import AsyncSessionLocal
+from model import Token
 
 
 class TokenAuthMiddleware(BaseHTTPMiddleware):
