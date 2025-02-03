@@ -1,13 +1,13 @@
 import secrets
-from schema import UserCreate,TaskCreate, TaskResponse
+from app.schema import UserCreate,TaskCreate, TaskResponse
 from fastapi import APIRouter, Depends, HTTPException, Request
-from database import AsyncSessionLocal
-from model import Task, User
+from app.database import AsyncSessionLocal
+from app.model import Task, User
 from typing import List
 from datetime import datetime, timedelta
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from model import Token
+from app.model import Token
 
 router = APIRouter()
 

@@ -5,7 +5,5 @@ from app.custom_middleware import TokenAuthMiddleware
 app = FastAPI()
 
 
-
-# Base.metadata.create_all(bind=engine)
 app.include_router(router)
 app.add_middleware(TokenAuthMiddleware)
